@@ -15,12 +15,47 @@ body {
   /* justify-content: center;
   align-content: center; */
   place-content: center;
-  justify-items: center;
-  align-items: start;
 }
 
-.item.item1 {
-  background-color: rgb(255, 132, 0);
-  justify-self: start;
-  align-self: end;
+.item {
+  border: 1px solid black;
+}
+.container2 {
+  background-color: aqua;
+  border: 1px solid black;
+  justify-content: center;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 150px 150px 150px;
+  grid-auto-flow: row;
+  align-content: center;
+  gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "side main main"
+    "side main main";
+}
+
+.item-1 {
+  background-color: blueviolet;
+  grid-area: header;
+}
+.item-2 {
+  background-color: rgb(68, 50, 230);
+  grid-area: side;
+}
+.item-3 {
+  background-color: rgb(68, 50, 230);
+  grid-area: main;
+}
+
+.container3 {
+  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  justify-content: center;
+  align-content: center;
+  height: 700px;
 }
