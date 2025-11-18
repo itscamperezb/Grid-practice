@@ -58,4 +58,59 @@ body {
   justify-content: center;
   align-content: center;
   height: 700px;
+  grid-template-areas:
+    "uno uno dos"
+    "tres cuatro cuatro";
+}
+
+.items1 {
+  background-color: blueviolet;
+  grid-area: uno;
+}
+
+.items2 {
+  background-color: rgb(33, 48, 68);
+  grid-area: dos;
+}
+
+.items3 {
+  background-color: rgb(51, 193, 115);
+  grid-area: tres;
+}
+
+.items4 {
+  background-color: rgb(138, 110, 76);
+  grid-area: cuatro;
+}
+.items5 {
+  background-color: rgb(83, 33, 114);
+}
+.items6 {
+  background-color: rgb(38, 85, 151);
+}
+.items7 {
+  background-color: rgb(33, 121, 58);
+}
+
+.container4 {
+  background-color: blanchedalmond;
+  display: grid;
+  grid-template-columns: minmax(30px, 300px) 30px minmax(30px, 300px);
+  grid-template-rows: repeat(3, auto);
+}
+
+.container5 {
+  background-color: rgb(22, 138, 138);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.celda {
+  border: 1px solid black;
+}
+
+.container6 {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
