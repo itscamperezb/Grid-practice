@@ -2,12 +2,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-div {
+/* div {
   border: 1px solid black;
-}
+} */
 
 main {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -19,9 +19,8 @@ main {
 
 #container1 {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: minmax(200px, 2fr) 3fr;
   grid-auto-rows: 400px;
-  background-color: aliceblue;
 }
 
 .info {
@@ -64,8 +63,33 @@ main {
   grid-auto-rows: minmax(200px, 300px);
   gap: 20px;
   justify-content: center;
-  background-color: aqua;
 }
 .video-dish {
   grid-area: 1/1/3/3;
+}
+
+.plate {
+  width: 100%;
+  height: 100%;
+}
+#container3 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 200px));
+  grid-auto-rows: minmax(100px, 200px);
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  #container1 {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    justify-content: center;
+  }
+
+  .imagen-hero {
+    display: none;
+  }
 }
